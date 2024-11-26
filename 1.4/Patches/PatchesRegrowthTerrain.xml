@@ -1,0 +1,294 @@
+<Patch>
+
+<Operation Class="PatchOperationFindMod">
+	<success>Always</success>
+	<mods>
+		<li>ReGrowth: Core</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	<!-- Regrowth Core -->
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_LavaRock"]/affordances</xpath>
+				<value>
+					<li>RockyDirt</li>
+				</value>
+			</li>	
+
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_HotSpringSand"]/affordances</xpath>
+				<value>
+					<li>Sand</li>
+				</value>
+			</li>			
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_TundraSoil"]/affordances</xpath>
+				<value>
+					<li>SoilF</li>
+				</value>
+			</li>				
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_DepletedSoil"]/affordances</xpath>
+				<value>
+					<li>Gravel</li>
+				</value>
+			</li>				
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_RubbleSoil"]/affordances</xpath>
+				<value>
+					<li>Gravel</li>
+				</value>
+			</li>		
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_DepletedMossy"]/affordances</xpath>
+				<value>
+					<li>Gravel</li>
+				</value>
+			</li>	
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_DepletedGravel"]/affordances</xpath>
+				<value>
+					<li>Gravel</li>
+				</value>
+			</li>	
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_AspenSoil"]/affordances</xpath>
+				<value>
+					<li>SoilF</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_BorealSoil"]/affordances</xpath>
+				<value>
+					<li>SoilF</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_TemperateSoil"]/affordances</xpath>
+				<value>
+					<li>SoilF</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_AnimaSoil"]/affordances</xpath>
+				<value>
+					<li>SoilF</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_AnimaSoilEnchanted"]/affordances</xpath>
+				<value>
+					<li>SoilF</li>
+				</value>
+			</li>			
+			
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_AnimaSoilCracked"]/affordances</xpath>
+				<value>
+					<li>SoilF</li>
+				</value>
+			</li>		
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_AnimaSpringSand"]/affordances</xpath>
+				<value>
+					<li>Sand</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_TropicalSoil"]/affordances</xpath>
+				<value>
+					<li>SoilF</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_BoilingSoil"]/affordances</xpath>
+				<value>
+					<li>SoilF</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			<success>Always</success>
+				<xpath>Defs/TerrainDef[defName = "RG_AridSoil"]/affordances</xpath>
+				<value>
+					<li>SoilF</li>
+				</value>
+			</li>
+
+			
+	<!-- Regrowth Core - "Water" -->
+
+	<!-- Regrowth Core - "Dark Marsh -->
+			<li Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationTest">
+						<xpath>Defs/TerrainDef[defName = "RG_DarkMarsh"]/affordances</xpath>
+						<success>Invert</success>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+					<success>Always</success>
+						<xpath>Defs/TerrainDef[defName = "RG_DarkMarsh"]</xpath>
+						<value>
+							<affordances/>
+						</value>
+					</li>
+
+					<li Class="PatchOperationAdd">
+					<success>Always</success>
+						<xpath>Defs/TerrainDef[defName = "RG_DarkMarsh"]/affordances</xpath>
+						<value>
+							<li>SoilMarshy</li>
+						</value>
+					</li>		
+				</operations>
+			</li>
+
+	<!-- Regrowth Core - "Hotspring -->
+			<li Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationTest">
+						<xpath>Defs/TerrainDef[defName = "RG_HotSpring"]/affordances</xpath>
+						<success>Invert</success>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+					<success>Always</success>
+						<xpath>Defs/TerrainDef[defName = "RG_HotSpring"]</xpath>
+						<value>
+							<affordances/>
+						</value>
+					</li>
+
+					<li Class="PatchOperationAdd">
+					<success>Always</success>
+						<xpath>Defs/TerrainDef[defName = "RG_HotSpring"]/affordances</xpath>
+						<value>
+							<li>WaterShallow</li>
+						</value>
+					</li>	
+				</operations>
+			</li>
+
+	<!-- Regrowth Core - "Hotspring Deep -->
+			<li Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationTest">
+						<xpath>Defs/TerrainDef[defName = "RG_HotSpringDeep"]/affordances</xpath>
+						<success>Invert</success>
+					</li>
+					<li Class="PatchOperationAdd">
+					<success>Always</success>
+						<xpath>Defs/TerrainDef[defName = "RG_HotSpringDeep"]</xpath>
+						<value>
+							<affordances/>
+						</value>
+					</li>
+
+					<li Class="PatchOperationAdd">
+					<success>Always</success>
+						<xpath>Defs/TerrainDef[defName = "RG_HotSpringDeep"]/affordances</xpath>
+						<value>
+							<li>WaterShallow</li>
+						</value>
+					</li>	
+				</operations>
+			</li>
+
+	<!-- Regrowth Core - "Toxic Waste" -->
+			<li Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ReGrowthCore.ActiveTerrainDef[defName = "RG_ToxicWaste"]/changeable</xpath>
+					</li>
+
+					<li Class="PatchOperationTest">
+						<xpath>Defs/ReGrowthCore.ActiveTerrainDef[defName = "RG_ToxicWaste"]/affordances</xpath>
+						<success>Invert</success>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+					<success>Always</success>
+						<xpath>Defs/ReGrowthCore.ActiveTerrainDef[defName = "RG_ToxicWaste"]</xpath>
+						<value>
+							<affordances/>
+						</value>
+					</li>
+
+					<li Class="PatchOperationAdd">
+					<success>Always</success>
+						<xpath>Defs/ReGrowthCore.ActiveTerrainDef[defName = "RG_ToxicWaste"]/affordances</xpath>
+						<value>
+							<li>WaterShallow</li>
+						</value>
+					</li>
+				</operations>
+			</li>
+
+	<!-- Regrowth Core - "Lava -->
+			<li Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationTest">
+						<xpath>Defs/ReGrowthCore.ActiveTerrainDef[defName = "RG_Lava"]/affordances</xpath>
+						<success>Invert</success>
+					</li>
+					<li Class="PatchOperationAdd">
+					<success>Always</success>
+						<xpath>Defs/ReGrowthCore.ActiveTerrainDef[defName = "RG_Lava"]</xpath>
+						<value>
+							<affordances/>
+						</value>
+					</li>
+
+					<li Class="PatchOperationAdd">
+					<success>Always</success>
+						<xpath>Defs/ReGrowthCore.ActiveTerrainDef[defName = "RG_Lava"]/affordances</xpath>
+						<value>
+							<li>WaterShallow</li>
+						</value>
+					</li>
+				</operations>
+			</li>
+			
+
+		</operations>	
+	</match>
+</Operation>
+
+</Patch>

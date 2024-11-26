@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>Dragon's Fertile Fields Regrowth Patches</name>
+	<supportedVersions>
+	<li>1.0</li>
+	<li>1.1</li>
+	<li>1.2</li>
+	<li>1.3</li>
+	<li>1.4</li>
+	<li>1.5</li>
+	</supportedVersions>
+	<author>DragonKing</author>
+	<packageId>dragonking.dragonsfertilefieldsregrowthpatches</packageId>
+	<url>
+	</url>
+	<description>
+&lt;size=24&gt;"Features"&lt;/size&gt;
+This mod patches Regrowth to be terraformed with Fertile Fields.
+
+&lt;size=24&gt;Why did I make this?&lt;/size&gt;
+Cause biomes are cool, and mod compatibility is even cooler.
+
+&lt;size=24&gt;What is Included/changed?&lt;/size&gt;
+I have added appropriate tags to the various terrain defs so that you can terraform them when Fertile Fields is present.
+
+&lt;size=24&gt;What this does not do&lt;/size&gt;
+Though you can convert the modded terrain to vanilla terrain, you cannot do it in reverse.
+
+&lt;size=24&gt;How to use this&lt;/size&gt;
+I always suggest that you put patches towards the bottom of your modlist.
+	</description>
+	<modDependencies>
+		<li>
+			<packageId>ReGrowth.BOTR.Core</packageId>
+			<displayName>ReGrowth: Core and Framework</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2260097569</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>jamaicancastle.RF.fertilefields</packageId>
+			<displayName>Fertile Fields [1.1]</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2012735237</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>ReGrowth.BOTR.Core</li>
+		<li>jamaicancastle.RF.fertilefields</li>
+	</loadAfter>
+</ModMetaData>
